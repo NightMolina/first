@@ -1,0 +1,30 @@
+C51 COMPILER V9.55   KEYBTN                                                                03/29/2024 19:20:26 PAGE 1   
+
+
+C51 COMPILER V9.55, COMPILATION OF MODULE KEYBTN
+OBJECT MODULE PLACED IN .\Objects\keybtn.obj
+COMPILER INVOKED BY: D:\Ange_Y\C51\C51 keil\C51\BIN\C51.EXE keybtn.c OMF2 OPTIMIZE(8,SPEED) BROWSE DEBUG PRINT(.\Listing
+                    -s\keybtn.lst) OBJECT(.\Objects\keybtn.obj)
+
+line level    source
+
+   1          #include "keybtn.h"
+   2          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

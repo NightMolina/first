@@ -1,0 +1,14 @@
+".\Objects\main.obj",
+".\Objects\oled.obj",
+".\Objects\pwm.obj",
+".\Objects\pid.obj",
+".\Objects\Delay.obj",
+".\Objects\UART.obj",
+".\Objects\ds18b20.obj",
+".\Objects\IIC.obj",
+".\Objects\keybtn.obj",
+".\Objects\LED.obj",
+".\Objects\oled_fong.obj" 
+TO ".\Objects\prj" 
+
+PRINT(".\Listings\prj.map") REMOVEUNUSED 

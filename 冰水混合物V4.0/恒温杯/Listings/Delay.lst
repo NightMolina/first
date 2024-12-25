@@ -1,0 +1,74 @@
+C51 COMPILER V9.55   DELAY                                                                 03/26/2024 18:21:52 PAGE 1   
+
+
+C51 COMPILER V9.55, COMPILATION OF MODULE DELAY
+OBJECT MODULE PLACED IN .\Objects\Delay.obj
+COMPILER INVOKED BY: D:\Ange_Y\C51\C51 keil\C51\BIN\C51.EXE Delay.c OMF2 OPTIMIZE(8,SPEED) BROWSE DEBUG PRINT(.\Listings
+                    -\Delay.lst) OBJECT(.\Objects\Delay.obj)
+
+line level    source
+
+   1          #include "Delay.h"
+   2          
+   3          // 设置时钟为11.0592MHz
+   4          #define FOSC 11059200L
+   5          #define T1MS (65536-FOSC/12/1000) // 1ms定时初值
+   6          
+   7          
+   8          void Delay_ms(unsigned int ms){
+   9   1              
+  10   1              while(ms--)
+  11   1              {
+  12   2                      TMOD &= 0xF0;           
+  13   2                      TMOD |= 0x01;           //定时器0,工作模式1
+  14   2                      TH0 = 0xFC;                     //至初值
+  15   2                      TL0 = 0x66;                     //定时1ms
+  16   2                      TF0 = 0;                        //清除溢出标志
+  17   2                      TR0 = 1;                        //开启定时器0
+  18   2                      EA=0;                           //关中断(使用查询方式)
+  19   2                      ET0=0;                          //关T0中断
+  20   2                      while(TF0 == 0);        //溢出等待
+  21   2                      TR0 = 0;                        //暂停定时器
+  22   2              }
+  23   1      
+  24   1      
+  25   1      }
+  26          
+  27          void Delay_us(unsigned char us){
+  28   1              while (us--){
+  29   2              _nop_();_nop_();_nop_();                
+  30   2              }
+  31   1      
+  32   1      }
+  33          void Delayms(unsigned int nms){         //@11.0592MHz
+  34   1      
+  35   1              unsigned char data i, j;
+  36   1              while(nms--){
+  37   2              i = 11;
+  38   2              j = 190;
+  39   2              do
+  40   2              {
+  41   3                      while (--j);
+  42   3              } while (--i);
+  43   2              }
+  44   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     71    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+C51 COMPILER V9.55   DELAY                                                                 03/26/2024 18:21:52 PAGE 2   
+
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
