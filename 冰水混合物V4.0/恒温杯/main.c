@@ -6,6 +6,7 @@
 #include "PWM.h"
 #include "pid.h"
 #include "LED.h"
+int a = 0;
 float oledt[4];
 unsigned long nPWM;
 extern float temp;

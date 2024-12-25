@@ -1,10 +1,10 @@
-C51 COMPILER V9.55   KEYBTN                                                                03/29/2024 19:20:26 PAGE 1   
+C51 COMPILER V9.54   KEYBTN                                                                12/25/2024 14:15:46 PAGE 1   
 
 
-C51 COMPILER V9.55, COMPILATION OF MODULE KEYBTN
+C51 COMPILER V9.54, COMPILATION OF MODULE KEYBTN
 OBJECT MODULE PLACED IN .\Objects\keybtn.obj
-COMPILER INVOKED BY: D:\Ange_Y\C51\C51 keil\C51\BIN\C51.EXE keybtn.c OMF2 OPTIMIZE(8,SPEED) BROWSE DEBUG PRINT(.\Listing
-                    -s\keybtn.lst) OBJECT(.\Objects\keybtn.obj)
+COMPILER INVOKED BY: E:\keil5\C51\BIN\C51.EXE keybtn.c OMF2 OPTIMIZE(8,SPEED) BROWSE DEBUG PRINT(.\Listings\keybtn.lst) 
+                    -OBJECT(.\Objects\keybtn.obj)
 
 line level    source
 
